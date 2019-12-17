@@ -1,0 +1,17 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-gap: 5em;
+    margin-bottom: 2em;
+}
+
+.contain {
+    width: 95%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 3em 0;
+    background-color: #f5f794;
+}

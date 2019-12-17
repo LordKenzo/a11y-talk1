@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accessibility Demo 01</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <span class="sr-only">Logo Aziendale - Home</span>
+                <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home <span class="sr-only">(pagina corrente)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="navbar-nav ml-auto">
+                    <span class="btn btn-primary">Register</span>
+                    <button class="btn" tabindex="-1">Login</button>
+                    <button class="btn btn-badcontrast"><Help!<span href="help.html" target="_blank">Help!</a><span class="sr-only">(apre un'altra finestra)</span></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>I am John Doe</h1>
+            <p>And I'm a <h3>Photographer</h3></p>
+            <button>Hire me</button>
+        </div>
+    </div>
+
+    <div class="main container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" tabindex="1">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" tabindex="3">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm order-last">
+                <div class="card " tabindex="2" style="width: 18rem; color:red;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;" tabindex="0">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+                <form>
+                    <label>Nome:</label><input placeholder="Nome" type="text">
+                    <label class="required">Cognome:</label><input placeholder="Cognome" type="text">
+                    <label class="required">Indirizzo:</label> <input placeholder="Indirizzo" type="text">
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <label for="CCNumber">
+                        <input id="CCNumber" type="text" aria-describedby="CCNumber-help" required>
+                        <div role="tooltip" id="CCNumber-help">Must be a Valid Credit Card Number</div>
+                    </fieldset>
+                    <p>Campi in rosso obbligatori</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="http://www.instagram.com">
+            <svg aria-label="Seguimi su Instagram" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+    </footer>
+</body>
+</html>

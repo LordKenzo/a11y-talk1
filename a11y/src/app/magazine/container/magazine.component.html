@@ -1,0 +1,16 @@
+<h1 class="sr-only" #titolo id="main-content-header" role="heading" aria-level="1" aria-label="Pagine Magazine caricata" tabindex="0">Pagina Magazine caricata</h1>
+
+<mat-progress-spinner 
+    *ngIf="isLoading"
+    color="primary" 
+    mode="indeterminate">
+</mat-progress-spinner>
+<div *ngFor="let article of articles">
+        <h2>{{article.title}}</h2>
+        <p>{{article.short}}</p>
+        <div class="article-commands">
+            <a [routerLink]="['/article', article.id]" [attr.aria-label]="'Leggi di più su: ' + article.short">Read More</a>
+
+        </div>
+</div>
+

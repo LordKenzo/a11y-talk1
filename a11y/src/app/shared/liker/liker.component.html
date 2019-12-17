@@ -1,0 +1,12 @@
+<div class="liker">
+
+    <span  class="vote-icon up" (click)="voteUp()" tabindex=0 role="button" aria-label="Clicca ti Piace">
+        <i class="material-icons">thumb_up</i>
+    </span>
+    <span  class="vote-icon down" (click)="voteDown()" tabindex=0 role="button" aria-label="Clicca non ti piace">
+        <i class="material-icons">thumb_down</i>
+    </span>
+    <span aria-live="polite" class="sr-only">{{likes}} Mi piace!</span>
+
+</div>
+

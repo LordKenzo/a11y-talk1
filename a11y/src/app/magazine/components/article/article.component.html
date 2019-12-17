@@ -1,0 +1,7 @@
+<div *ngIf="article">
+        <h2 #articolo tabindex="0" role="heading">{{article.title}}</h2>
+        <p tabindex="0">{{article.text}}</p>
+        <div class="article-commands">
+            <app-liker [likes]="article.likes"></app-liker>
+        </div>
+</div>
